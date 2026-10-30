@@ -33,13 +33,11 @@ jobs:
       # Set the project up, run the linter and run the tests.
       - uses: actions/setup-node@v7
 
-      - setup: make setup
+      - run: make setup
 
-      - install: make install
+      - run: make install
 
-      - setup: make setup
+      - run: make lint
 
-      - lint: make lint
-
-      - tests: make test
+      - run: make test
       # END
